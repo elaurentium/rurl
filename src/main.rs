@@ -1,6 +1,7 @@
 mod http_request;
 
-fn main() {
-    let req = http_request::HttpRequest::new();
-    println!("HTTP Request: {:?}", req.method);
+use std::io::{self, Write};
+
+fn main() -> io::Result<()> {
+    return http_request::http_request();
 }

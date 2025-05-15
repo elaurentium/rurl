@@ -1,7 +1,7 @@
 pub struct HttpRequest {
     pub method: String,
     pub path: String,
-    pub headers: Vec<(String, String)>,
+    pub header: Vec<(String, String)>,
     pub body: String,
     pub query: String,
     pub host: String,
@@ -13,7 +13,7 @@ impl HttpRequest {
         HttpRequest {
             method: String::new(),
             path: String::new(),
-            headers: Vec::new(),
+            header: Vec::new(),
             body: String::new(),
             query: String::new(),
             host: String::new(),
@@ -21,3 +21,4 @@ impl HttpRequest {
         }
     }
 }
+

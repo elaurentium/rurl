@@ -1,7 +1,8 @@
 mod http_request;
 
-use std::io::{self, Write};
 
-fn main() -> io::Result<()> {
-    return http_request::http_request();
+fn main() -> Result<(), String> {
+    let mut req = http_request::http_request().map_err(|e| e.to_string())?;
+    http_request::connection(&mut req)?;
+    Ok(())
 }

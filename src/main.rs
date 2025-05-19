@@ -1,8 +1,10 @@
 mod http_request;
+mod resolve;
 
 
-fn main() -> Result<(), String> {
-    let mut req = http_request::http_request().map_err(|e| e.to_string())?;
-    http_request::connection(&mut req)?;
-    Ok(())
+fn main() {
+    if let Err(e) = http_request::http_request() {
+        eprintln!("Error: {}", e);
+        std::process::exit(1);
+    }
 }

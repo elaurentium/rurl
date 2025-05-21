@@ -1,9 +1,18 @@
 [package]
 name = "rurl"
 version = "0.1.0"
+authors  = ["Evandro Lourenço Limeira <evan.limeira@gmail.com>"]
+repository = "https://github.com/elaurentium/rurl"
 edition = "2024"
 
 [lib]
-crate-type = ["cdylib"]
+name = "rurl"
+path = "src/lib.rs"
+crate-type = ["lib", "cdylib"]
+
+[[example]]
+name = "example"
+path = "example/example.rs"
+required-features = []
 
 [dependencies]

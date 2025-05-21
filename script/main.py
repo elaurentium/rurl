@@ -1,5 +1,4 @@
 import sys
-import requests
 
 def main():
     if len(sys.argv) < 2:
@@ -12,3 +11,7 @@ def main():
         print("  -t, --timeout <seconds>  Define a timeout for the request")
 
         sys.exit(1)
+
+
+if __name__ == '__main__':
+    main()

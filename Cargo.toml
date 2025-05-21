@@ -15,4 +15,9 @@ name = "example"
 path = "example/example.rs"
 required-features = []
 
+[[example]]
+name = "c_example"
+path = "example/c_example.rs"
+required-features = []
+
 [dependencies]
